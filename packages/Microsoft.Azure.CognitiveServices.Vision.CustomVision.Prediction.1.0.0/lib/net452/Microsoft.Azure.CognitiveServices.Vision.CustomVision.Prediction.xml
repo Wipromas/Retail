@@ -1,0 +1,1537 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction</name>
+    </assembly>
+    <members>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.ApiKey">
+            <summary>
+            API key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.Endpoint">
+            <summary>
+            Supported Cognitive Services endpoints.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.#ctor(System.Net.Http.HttpClient,System.Boolean)">
+            <summary>
+            Initializes a new instance of the CustomVisionPredictionClient class.
+            </summary>
+            <param name='httpClient'>
+            HttpClient to be used
+            </param>
+            <param name='disposeHttpClient'>
+            True: will dispose the provided httpClient on calling CustomVisionPredictionClient.Dispose(). False: will not dispose provided httpClient</param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.#ctor(System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the CustomVisionPredictionClient class.
+            </summary>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the CustomVisionPredictionClient class.
+            </summary>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.Initialize">
+            <summary>
+            Initializes client properties.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.ClassifyImageUrlWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image url and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.ClassifyImageWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.ClassifyImageUrlWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image url without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.ClassifyImageWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.DetectImageUrlWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image url and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.DetectImageWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.DetectImageUrlWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image url without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClient.DetectImageWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown when a required parameter is null
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions">
+            <summary>
+            Extension methods for CustomVisionPredictionClient.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageUrl(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String)">
+            <summary>
+            Classify an image url and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageUrlAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Classify an image url and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageUrlWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Classify an image url and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImage(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String)">
+            <summary>
+            Classify an image and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Classify an image and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Classify an image and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageUrlWithNoStore(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String)">
+            <summary>
+            Classify an image url without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageUrlWithNoStoreAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Classify an image url without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageUrlWithNoStoreWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Classify an image url without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageWithNoStore(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String)">
+            <summary>
+            Classify an image without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageWithNoStoreAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Classify an image without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.ClassifyImageWithNoStoreWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Classify an image without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageUrl(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String)">
+            <summary>
+            Detect objects in an image url and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageUrlAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image url and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageUrlWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Detect objects in an image url and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImage(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String)">
+            <summary>
+            Detect objects in an image and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Detect objects in an image and saves the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageUrlWithNoStore(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String)">
+            <summary>
+            Detect objects in an image url without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageUrlWithNoStoreAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image url without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageUrlWithNoStoreWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Detect objects in an image url without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the image to be
+            evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageWithNoStore(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String)">
+            <summary>
+            Detect objects in an image without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageWithNoStoreAsync(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.CustomVisionPredictionClientExtensions.DetectImageWithNoStoreWithHttpMessages(Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient,System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Detect objects in an image without saving the result.
+            </summary>
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP. Supports
+            images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.SerializationSettings">
+            <summary>
+            The base URI of the service.
+            </summary>
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.ApiKey">
+            <summary>
+            API key.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.Endpoint">
+            <summary>
+            Supported Cognitive Services endpoints.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.ClassifyImageUrlWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image url and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.ClassifyImageWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP.
+            Supports images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.ClassifyImageUrlWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image url without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the
+            image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.ClassifyImageWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Classify an image without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP.
+            Supports images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.DetectImageUrlWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image url and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An ImageUrl that contains the url of the image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.DetectImageWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image and saves the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP.
+            Supports images up to 4MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.DetectImageUrlWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image url without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageUrl'>
+            An {Iris.Web.Api.Models.ImageUrl} that contains the url of the
+            image to be evaluated.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.ICustomVisionPredictionClient.DetectImageWithNoStoreWithHttpMessagesAsync(System.Guid,System.String,System.IO.Stream,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <summary>
+            Detect objects in an image without saving the result.
+            </summary>
+            <param name='projectId'>
+            The project id.
+            </param>
+            <param name='publishedName'>
+            Specifies the name of the model to evaluate against.
+            </param>
+            <param name='imageData'>
+            Binary image data. Supported formats are JPEG, GIF, PNG, and BMP.
+            Supports images up to 0MB.
+            </param>
+            <param name='application'>
+            Optional. Specifies the name of application using the endpoint.
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox">
+            <summary>
+            Bounding box that defines a region of an image.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.#ctor">
+            <summary>
+            Initializes a new instance of the BoundingBox class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.#ctor(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            Initializes a new instance of the BoundingBox class.
+            </summary>
+            <param name="left">Coordinate of the left boundary.</param>
+            <param name="top">Coordinate of the top boundary.</param>
+            <param name="width">Width.</param>
+            <param name="height">Height.</param>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.Left">
+            <summary>
+            Gets or sets coordinate of the left boundary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.Top">
+            <summary>
+            Gets or sets coordinate of the top boundary.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.Width">
+            <summary>
+            Gets or sets width.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.Height">
+            <summary>
+            Gets or sets height.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionError.#ctor">
+            <summary>
+            Initializes a new instance of the CustomVisionError class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionError.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the CustomVisionError class.
+            </summary>
+            <param name="code">The error code. Possible values include:
+            'NoError', 'BadRequest', 'BadRequestExceededBatchSize',
+            'BadRequestNotSupported', 'BadRequestInvalidIds',
+            'BadRequestProjectName', 'BadRequestProjectNameNotUnique',
+            'BadRequestProjectDescription', 'BadRequestProjectUnknownDomain',
+            'BadRequestProjectUnknownClassification',
+            'BadRequestProjectUnsupportedDomainTypeChange',
+            'BadRequestProjectUnsupportedExportPlatform',
+            'BadRequestIterationName', 'BadRequestIterationNameNotUnique',
+            'BadRequestIterationDescription',
+            'BadRequestIterationIsNotTrained',
+            'BadRequestWorkspaceCannotBeModified',
+            'BadRequestWorkspaceNotDeletable', 'BadRequestTagName',
+            'BadRequestTagNameNotUnique', 'BadRequestTagDescription',
+            'BadRequestTagType', 'BadRequestMultipleNegativeTag',
+            'BadRequestImageTags', 'BadRequestImageRegions',
+            'BadRequestNegativeAndRegularTagOnSameImage',
+            'BadRequestRequiredParamIsNull', 'BadRequestIterationIsPublished',
+            'BadRequestInvalidPublishName', 'BadRequestInvalidPublishTarget',
+            'BadRequestUnpublishFailed', 'BadRequestSubscriptionApi',
+            'BadRequestExceedProjectLimit',
+            'BadRequestExceedIterationPerProjectLimit',
+            'BadRequestExceedTagPerProjectLimit',
+            'BadRequestExceedTagPerImageLimit', 'BadRequestExceededQuota',
+            'BadRequestCannotMigrateProjectWithName',
+            'BadRequestNotLimitedTrial', 'BadRequestImageBatch',
+            'BadRequestImageStream', 'BadRequestImageUrl',
+            'BadRequestImageFormat', 'BadRequestImageSizeBytes',
+            'BadRequestImageExceededCount', 'BadRequestTrainingNotNeeded',
+            'BadRequestTrainingNotNeededButTrainingPipelineUpdated',
+            'BadRequestTrainingValidationFailed',
+            'BadRequestClassificationTrainingValidationFailed',
+            'BadRequestMultiClassClassificationTrainingValidationFailed',
+            'BadRequestMultiLabelClassificationTrainingValidationFailed',
+            'BadRequestDetectionTrainingValidationFailed',
+            'BadRequestTrainingAlreadyInProgress',
+            'BadRequestDetectionTrainingNotAllowNegativeTag',
+            'BadRequestInvalidEmailAddress',
+            'BadRequestDomainNotSupportedForAdvancedTraining',
+            'BadRequestExportPlatformNotSupportedForAdvancedTraining',
+            'BadRequestReservedBudgetInHoursNotEnoughForAdvancedTraining',
+            'BadRequestExportValidationFailed',
+            'BadRequestExportAlreadyInProgress',
+            'BadRequestPredictionIdsMissing',
+            'BadRequestPredictionIdsExceededCount',
+            'BadRequestPredictionTagsExceededCount',
+            'BadRequestPredictionResultsExceededCount',
+            'BadRequestPredictionInvalidApplicationName',
+            'BadRequestPredictionInvalidQueryParameters', 'BadRequestInvalid',
+            'UnsupportedMediaType', 'Forbidden', 'ForbiddenUser',
+            'ForbiddenUserResource', 'ForbiddenUserSignupDisabled',
+            'ForbiddenUserSignupAllowanceExceeded',
+            'ForbiddenUserDoesNotExist', 'ForbiddenUserDisabled',
+            'ForbiddenUserInsufficientCapability', 'ForbiddenDRModeEnabled',
+            'ForbiddenInvalid', 'NotFound', 'NotFoundProject',
+            'NotFoundProjectDefaultIteration', 'NotFoundIteration',
+            'NotFoundIterationPerformance', 'NotFoundTag', 'NotFoundImage',
+            'NotFoundDomain', 'NotFoundApimSubscription', 'NotFoundInvalid',
+            'Conflict', 'ConflictInvalid', 'ErrorUnknown',
+            'ErrorProjectInvalidWorkspace',
+            'ErrorProjectInvalidPipelineConfiguration',
+            'ErrorProjectInvalidDomain', 'ErrorProjectTrainingRequestFailed',
+            'ErrorProjectExportRequestFailed',
+            'ErrorFeaturizationServiceUnavailable',
+            'ErrorFeaturizationQueueTimeout',
+            'ErrorFeaturizationInvalidFeaturizer',
+            'ErrorFeaturizationAugmentationUnavailable',
+            'ErrorFeaturizationUnrecognizedJob',
+            'ErrorFeaturizationAugmentationError',
+            'ErrorExporterInvalidPlatform', 'ErrorExporterInvalidFeaturizer',
+            'ErrorExporterInvalidClassifier',
+            'ErrorPredictionServiceUnavailable',
+            'ErrorPredictionModelNotFound', 'ErrorPredictionModelNotCached',
+            'ErrorPrediction', 'ErrorPredictionStorage', 'ErrorRegionProposal',
+            'ErrorInvalid'</param>
+            <param name="message">A message explaining the error reported by
+            the service.</param>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionError.Code">
+            <summary>
+            Gets or sets the error code. Possible values include: 'NoError',
+            'BadRequest', 'BadRequestExceededBatchSize',
+            'BadRequestNotSupported', 'BadRequestInvalidIds',
+            'BadRequestProjectName', 'BadRequestProjectNameNotUnique',
+            'BadRequestProjectDescription', 'BadRequestProjectUnknownDomain',
+            'BadRequestProjectUnknownClassification',
+            'BadRequestProjectUnsupportedDomainTypeChange',
+            'BadRequestProjectUnsupportedExportPlatform',
+            'BadRequestIterationName', 'BadRequestIterationNameNotUnique',
+            'BadRequestIterationDescription',
+            'BadRequestIterationIsNotTrained',
+            'BadRequestWorkspaceCannotBeModified',
+            'BadRequestWorkspaceNotDeletable', 'BadRequestTagName',
+            'BadRequestTagNameNotUnique', 'BadRequestTagDescription',
+            'BadRequestTagType', 'BadRequestMultipleNegativeTag',
+            'BadRequestImageTags', 'BadRequestImageRegions',
+            'BadRequestNegativeAndRegularTagOnSameImage',
+            'BadRequestRequiredParamIsNull', 'BadRequestIterationIsPublished',
+            'BadRequestInvalidPublishName', 'BadRequestInvalidPublishTarget',
+            'BadRequestUnpublishFailed', 'BadRequestSubscriptionApi',
+            'BadRequestExceedProjectLimit',
+            'BadRequestExceedIterationPerProjectLimit',
+            'BadRequestExceedTagPerProjectLimit',
+            'BadRequestExceedTagPerImageLimit', 'BadRequestExceededQuota',
+            'BadRequestCannotMigrateProjectWithName',
+            'BadRequestNotLimitedTrial', 'BadRequestImageBatch',
+            'BadRequestImageStream', 'BadRequestImageUrl',
+            'BadRequestImageFormat', 'BadRequestImageSizeBytes',
+            'BadRequestImageExceededCount', 'BadRequestTrainingNotNeeded',
+            'BadRequestTrainingNotNeededButTrainingPipelineUpdated',
+            'BadRequestTrainingValidationFailed',
+            'BadRequestClassificationTrainingValidationFailed',
+            'BadRequestMultiClassClassificationTrainingValidationFailed',
+            'BadRequestMultiLabelClassificationTrainingValidationFailed',
+            'BadRequestDetectionTrainingValidationFailed',
+            'BadRequestTrainingAlreadyInProgress',
+            'BadRequestDetectionTrainingNotAllowNegativeTag',
+            'BadRequestInvalidEmailAddress',
+            'BadRequestDomainNotSupportedForAdvancedTraining',
+            'BadRequestExportPlatformNotSupportedForAdvancedTraining',
+            'BadRequestReservedBudgetInHoursNotEnoughForAdvancedTraining',
+            'BadRequestExportValidationFailed',
+            'BadRequestExportAlreadyInProgress',
+            'BadRequestPredictionIdsMissing',
+            'BadRequestPredictionIdsExceededCount',
+            'BadRequestPredictionTagsExceededCount',
+            'BadRequestPredictionResultsExceededCount',
+            'BadRequestPredictionInvalidApplicationName',
+            'BadRequestPredictionInvalidQueryParameters', 'BadRequestInvalid',
+            'UnsupportedMediaType', 'Forbidden', 'ForbiddenUser',
+            'ForbiddenUserResource', 'ForbiddenUserSignupDisabled',
+            'ForbiddenUserSignupAllowanceExceeded',
+            'ForbiddenUserDoesNotExist', 'ForbiddenUserDisabled',
+            'ForbiddenUserInsufficientCapability', 'ForbiddenDRModeEnabled',
+            'ForbiddenInvalid', 'NotFound', 'NotFoundProject',
+            'NotFoundProjectDefaultIteration', 'NotFoundIteration',
+            'NotFoundIterationPerformance', 'NotFoundTag', 'NotFoundImage',
+            'NotFoundDomain', 'NotFoundApimSubscription', 'NotFoundInvalid',
+            'Conflict', 'ConflictInvalid', 'ErrorUnknown',
+            'ErrorProjectInvalidWorkspace',
+            'ErrorProjectInvalidPipelineConfiguration',
+            'ErrorProjectInvalidDomain', 'ErrorProjectTrainingRequestFailed',
+            'ErrorProjectExportRequestFailed',
+            'ErrorFeaturizationServiceUnavailable',
+            'ErrorFeaturizationQueueTimeout',
+            'ErrorFeaturizationInvalidFeaturizer',
+            'ErrorFeaturizationAugmentationUnavailable',
+            'ErrorFeaturizationUnrecognizedJob',
+            'ErrorFeaturizationAugmentationError',
+            'ErrorExporterInvalidPlatform', 'ErrorExporterInvalidFeaturizer',
+            'ErrorExporterInvalidClassifier',
+            'ErrorPredictionServiceUnavailable',
+            'ErrorPredictionModelNotFound', 'ErrorPredictionModelNotCached',
+            'ErrorPrediction', 'ErrorPredictionStorage', 'ErrorRegionProposal',
+            'ErrorInvalid'
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionError.Message">
+            <summary>
+            Gets or sets a message explaining the error reported by the
+            service.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionError.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorCodes">
+            <summary>
+            Defines values for CustomVisionErrorCodes.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException">
+            <summary>
+            Exception thrown for an invalid response with CustomVisionError
+            information.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException.Request">
+            <summary>
+            Gets information about the associated HTTP request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException.Response">
+            <summary>
+            Gets information about the associated HTTP response.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException.Body">
+            <summary>
+            Gets or sets the body object.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException.#ctor">
+            <summary>
+            Initializes a new instance of the CustomVisionErrorException class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the CustomVisionErrorException class.
+            </summary>
+            <param name="message">The exception message.</param>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.CustomVisionErrorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the CustomVisionErrorException class.
+            </summary>
+            <param name="message">The exception message.</param>
+            <param name="innerException">Inner exception.</param>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction">
+            <summary>
+            Result of an image prediction request.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.#ctor">
+            <summary>
+            Initializes a new instance of the ImagePrediction class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.#ctor(System.Guid,System.Guid,System.Guid,System.DateTime,System.Collections.Generic.IList{Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel})">
+            <summary>
+            Initializes a new instance of the ImagePrediction class.
+            </summary>
+            <param name="id">Prediction Id.</param>
+            <param name="project">Project Id.</param>
+            <param name="iteration">Iteration Id.</param>
+            <param name="created">Date this prediction was created.</param>
+            <param name="predictions">List of predictions.</param>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.Id">
+            <summary>
+            Gets prediction Id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.Project">
+            <summary>
+            Gets project Id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.Iteration">
+            <summary>
+            Gets iteration Id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.Created">
+            <summary>
+            Gets date this prediction was created.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImagePrediction.Predictions">
+            <summary>
+            Gets list of predictions.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl">
+            <summary>
+            Image url.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl.#ctor">
+            <summary>
+            Initializes a new instance of the ImageUrl class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the ImageUrl class.
+            </summary>
+            <param name="url">Url of the image.</param>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl.Url">
+            <summary>
+            Gets or sets url of the image.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.ImageUrl.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="T:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel">
+            <summary>
+            Prediction result.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.#ctor">
+            <summary>
+            Initializes a new instance of the PredictionModel class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.#ctor(System.Double,System.Guid,System.String,Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.BoundingBox)">
+            <summary>
+            Initializes a new instance of the PredictionModel class.
+            </summary>
+            <param name="probability">Probability of the tag.</param>
+            <param name="tagId">Id of the predicted tag.</param>
+            <param name="tagName">Name of the predicted tag.</param>
+            <param name="boundingBox">Bounding box of the prediction.</param>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.Probability">
+            <summary>
+            Gets probability of the tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.TagId">
+            <summary>
+            Gets id of the predicted tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.TagName">
+            <summary>
+            Gets name of the predicted tag.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.BoundingBox">
+            <summary>
+            Gets bounding box of the prediction.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+    </members>
+</doc>

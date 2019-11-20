@@ -1,0 +1,57 @@
+﻿@model DevNxt_1.Models.Result
+@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<div style="height:20px"><br /></div>
+<div class="container" style="text-align:center">
+    <br />
+    <h1><u>Prediction Result</u></h1>
+    <br />
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>Labels</th>
+                <th>Probability</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @if (TempData["prediction"] != null)
+            {
+                foreach (var predictionModel in (IList<DevNxt_1.Models.Result>)TempData["prediction"])
+                {
+                    <tr>
+                        <td>@predictionModel.tagName </td>
+                        <td>@predictionModel.probability</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+
+    table {
+        border-collapse: collapse;
+        width: 70%;
+       
+    }
+
+
+
+    th, td {
+        text-align: center;
+        padding: 2px;
+        font-size: large;
+        line-height: inherit
+    }
+</style>

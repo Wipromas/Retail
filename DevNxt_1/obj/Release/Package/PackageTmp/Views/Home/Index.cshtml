@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<div class="jumbotron">
+    <h1 align="center">Vegetable Classification</h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-6" style="background-color:lightcyan;padding-top: 10px; padding-bottom:10px">
+        <h2>Training</h2>
+        <form action="/Home/TrainingForm" method="post">
+            <label for="email">Enter tags:</label>
+            <input id="tagDataForm" type="text" class="form-control" name="tagDataForm" placeholder="Red Potataoes,Tomatoes etc" multiple>
+            <br />
+            <input type="submit" class="btn btn-primary btn-md" value="Submit" />
+            <div>
+                @TempData["Message"]
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6" style="background-color:lightgrey;padding-top: 10px; padding-bottom:10px">
+
+        <h2>Prediction</h2>
+        <label for="email">Enter URL:<span class="glyphicon glyphicon-envelope"></span></label>
+        <form action="/Home/PredictingForm" method="post">
+            <input id="urlFormData" type="url" class="form-control" name="urlFormData" placeholder="URL">
+            <br />
+            <input type="submit" class="btn btn-primary btn-md" value="Predict" style="width:100px">
+        </form>
+        <br />
+
+
+        <div>
+            <input type='file' id="files" multiple="multiple" />
+
+        </div>
+        <br />
+        <form action="/Home/PredictingForm1" method="post">
+            <input type="button" id="upload" value="Upload" class="btn btn-primary btn-md" style="width:100px" />&nbsp;
+            <input type="submit" class="btn btn-primary btn-md" value="Predict" style="width:100px">
+        </form>
+
+    </div>
+</div>
+
+
+
+
+<script>
+    $body = $("body");
+    $(document).on({
+        ajaxStart: function () { $body.addClass("loading"); },
+        ajaxStop: function () { $body.removeClass("loading"); }
+    });
+
+
+
+    $(document).ready(function () {
+        $("#upload").click(function () {
+            var data = new FormData();
+
+            //Add the Multiple selected files into the data object
+            var files = $("#files").get(0).files;
+            for (i = 0; i < files.length; i++) {
+                data.append("files" + i, files[i]);
+            }
+
+
+
+            //Post the data (files) to the server
+            if (files.length > 0) {
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("Upload")",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        alert("Successfully Uploaded!");
+                    },
+                    error: function () {
+                        alert("An error occurred!");
+                    },
+                });
+            }
+        });
+    });
+
+
+</script>

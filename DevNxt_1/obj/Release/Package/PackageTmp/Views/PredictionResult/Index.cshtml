@@ -1,0 +1,23 @@
+﻿<div class="container">
+    <h2>Prediction result</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Labels</th>
+                <th>Probability</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (TempData["prediction"] != null)
+            {
+                foreach (var predictionModel in (IList < Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction.Models.PredictionModel >)TempData["prediction"])
+                {
+                    <tr>
+                        <td>@predictionModel.TagName </td>
+                        <td>@predictionModel.Probability</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

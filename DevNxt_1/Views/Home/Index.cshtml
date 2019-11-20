@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<div  style="height:150px;font-size:large">
+    
+    <h1 align="center" style="font-size:50px"><b >Vegetable </b> <small style="color:black"><b>Classification</b></small></h1>
+</div>
+
+<div class="row">
+    <div class="col-sm-6" style="padding-top: 10px; padding-bottom:10px;border:solid;font-size:large
+  ">
+        <h2><u>Training</u></h2>
+        <form action="/Home/TrainingForm" method="post">
+            <label for="email"><b>Enter tags:</b></label>
+            <input id="tagDataForm" type="text" class="form-control" name="tagDataForm" placeholder="Red Potataoes,Tomatoes etc" multiple  style="font-size:15px">
+            <br />
+            <input type="submit" class="btn btn-primary btn-md" value="Submit" style="font-size:15px" />
+            <div>
+                @TempData["Message"]
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-6" style="padding-top: 10px; padding-bottom:10px;border:solid;font-size:large
+  ">
+
+        <h2><u>Prediction</u></h2>
+        <label for="email"><b>Enter URL:</b><span class="glyphicon glyphicon-envelope"></span></label>
+        <form action="/Home/PredictingForm" method="post">
+            <input id="urlFormData" type="url" class="form-control" name="urlFormData" placeholder="URL" style="font-size:15px">
+            <br />
+            <input type="submit" class="btn btn-primary btn-md" value="Predict" style="width:100px; font-size:15px">
+        </form>
+        <br />
+
+
+        <div>
+            <input type='file' id="files" multiple="multiple" />
+
+        </div>
+        <br />
+        <input type="button" id="upload" value="Predict" class="btn btn-primary btn-md" style="width:100px;font-size:15px" />
+        @*<form action="/Home/PredictingForm1" method="post">
+            <input type="submit" id="upload" value="Predict" class="btn btn-primary btn-md" style="width:100px;font-size:15px" />&nbsp;
+            <input type="submit" class="btn btn-primary btn-md" value="Predict" style="width:100px;font-size:15px">
+        </form>*@
+
+    </div>
+</div>
+
+
+
+
+<script>
+    $body = $("body");
+    $(document).on({
+        ajaxStart: function () { $body.addClass("loading"); },
+        ajaxStop: function () { $body.removeClass("loading"); }
+    });
+
+
+
+    $(document).ready(function () {
+        $("#upload").click(function () {
+            var data = new FormData();
+
+            //Add the Multiple selected files into the data object
+            var files = $("#files").get(0).files;
+            for (i = 0; i < files.length; i++) {
+                data.append("files" + i, files[i]);
+            }
+
+
+
+            //Post the data (files) to the server
+            if (files.length > 0) {
+                $.ajax({
+                    type: 'POST',
+                    url: "@Url.Action("PredictingForm1")",
+                    data: data,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                       
+                        var redirect = '@Url.Action("Index", "PredictionResult")';
+                       window.location.href = redirect;
+                    },
+                    error: function () {
+                        alert("An error occurred!");
+                    },
+                });
+            }
+        });
+    });
+
+
+</script>
